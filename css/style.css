@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    min-width: 1200px;
+}
+table{
+    width: 300px;
+    text-align: center;
+    margin: auto;
+    border: .5px solid gray;
+    margin-top: 10px;
+}
+.container{
+    width: 100%;
+    height: 50px;
+    background: orange;
+}
+.search{
+    padding: 10px;
+    text-align: center;
+}
+#search_text{
+    border: none;
+    border-radius: 5px 0 0 5px;
+    height: 30px;
+    padding: 10px;
+}
+.search-button{
+    border: none;
+    border-radius: 0 5px 5px 0;
+    height: 30px;
+    padding: 6pt;
+    cursor: pointer;
+    background: lightblue;
+}
+#search-result{
+    clear: both;
+}
