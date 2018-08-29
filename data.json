@@ -1,0 +1,28 @@
+{
+    "city": [
+      {
+        "id": "1",
+        "city_name": "Ha Noi"
+      },
+      {
+        "id": "2",
+        "city_name": "Ho Chi Minh City"
+      },
+      {
+        "id": "3",
+        "city_name": "Bangkok"
+      },
+      {
+        "id": "4",
+        "city_name": "New York"
+      },
+      {
+        "id": "5",
+        "city_name": "San Francisco"
+      },
+      {
+        "id": "6",
+        "city_name": "Da Nang"
+      }
+    ]
+  }

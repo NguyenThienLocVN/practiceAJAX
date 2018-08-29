@@ -1,7 +1,9 @@
 <?php
-//fetch.php
+//Connect DB
 $conn = mysqli_connect("localhost", "root", "123456", "search");
 $output = '';
+
+// Check if isset request
 if(isset($_POST["query"]))
 {
  $search = mysqli_real_escape_string($conn, $_POST["query"]);
@@ -17,27 +19,22 @@ else
 $result = mysqli_query($conn, $query);
 if(mysqli_num_rows($result) > 0)
 {
- $output .= '
-   <table>
-    <tr>
-     <th>ID</th>
-     <th>City Name</th>
-    </tr>
- ';
- while($row = mysqli_fetch_array($result))
+  $arr = [];
+  $inc = 0;
+ while($row = mysqli_fetch_assoc($result))
  {
-  $output .= '
-   <tr>
-    <td>'.$row["id"].'</td>
-    <td>'.$row["city_name"].'</td>
-   </tr>
-  ';
+  $data = array(
+    'id'=>$row["id"],
+    'city'=>$row["city_name"]);
+  
+  $arr[$inc] = $data;
+  $inc++;
  }
- echo $output;
-}
+ echo json_encode($arr);
+} 
+
 else
 {
- echo 'Data Not Found';
+ echo '<p style="text-align:center;">Data Not Found</p>';
 }
-
 ?>
